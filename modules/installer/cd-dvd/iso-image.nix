@@ -190,7 +190,13 @@ in
       options = "loop";
     };
 
-  boot.initrd.availableKernelModules = [ "squashfs" "iso9660" ];
+  boot.initrd.availableKernelModules = [
+    "squashfs"
+    "iso9660" 
+    # USB 3 support
+    "xhci"
+    "xhci_hcd"
+  ];
 
   boot.initrd.kernelModules = [ "loop" ];
 
